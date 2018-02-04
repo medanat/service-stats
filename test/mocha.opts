@@ -1,0 +1,11 @@
+--inline-diffs
+--reporter spec
+--bail
+--check-leaks
+--recursive
+--sort
+--colors
+--throw-deprecation
+--timeout 200
+--exit
+./test
