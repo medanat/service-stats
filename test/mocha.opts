@@ -1,3 +1,4 @@
+--require test/env
 --inline-diffs
 --reporter spec
 --bail
