@@ -2,7 +2,7 @@ const os = require('os'),
       ms = require('ms'),
       { bytesToSize } = require('../helpers');
 
-function osInfo() {
+function info() {
   return {
     info: `${os.platform()} ${os.release()} ${os.arch()}`,
     uptime: ms(os.uptime() * 1000, { long: true }),
@@ -12,4 +12,4 @@ function osInfo() {
   };
 }
 
-module.exports = osInfo;
+module.exports = info;
