@@ -38,6 +38,10 @@ serviceStats({ node: true, os: true, pm2, redis, socketio })
         totalMemory: '3.8 GB'
       },
       pm2: {
+        currentApp: {
+          currentInstance: 1,
+          instances: 1
+        },
         ids: ['0'],
         processes: [{
           name: app,
