@@ -1,7 +1,9 @@
+const { version, env: { NODE_ENV: env } } = process;
+
 function info() {
   return {
-    env: process.env.NODE_ENV,
-    version: process.version
+    env,
+    version
   };
 }
 
