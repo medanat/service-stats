@@ -4,6 +4,6 @@ const { expect } = require('chai'),
 describe('os', () => {
   it('reports os related attributes', () => {
     expect(os())
-      .to.have.keys('info', 'cpuCount', 'uptime', 'freeMemory', 'totalMemory');
+      .to.have.keys('details', 'cpuCount', 'uptime', 'freeMemory', 'totalMemory');
   });
 });
