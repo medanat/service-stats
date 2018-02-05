@@ -7,6 +7,6 @@
 --sort
 --colors
 --throw-deprecation
---timeout 200
+--timeout 500
 --exit
 ./test
