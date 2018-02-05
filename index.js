@@ -1,1 +1,1 @@
-module.exports = require('./src/services');
+module.exports = require('./src/service-stats');

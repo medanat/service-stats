@@ -1,6 +1,6 @@
 const { expect } = require('chai'),
       sinon = require('sinon'),
-      serviceStats = require('../src/service-stats'),
+      serviceStats = require('../'),
       services = require('../src/services');
 
 describe('service-stats', () => {
