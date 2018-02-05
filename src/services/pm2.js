@@ -1,4 +1,6 @@
-const { bytesToSize } = require('../helpers');
+const { bytesToSize } = require('../helpers'),
+      { instances, instance_var } = process.env,
+      currentInstance = parseInt(process.env[instance_var], 10) + 1;
 
 function info(pm2) {
   return new Promise((resolve, reject) => {
@@ -10,6 +12,10 @@ function info(pm2) {
       const ids = Object.keys(data);
 
       return resolve({
+        currentApp: {
+          currentInstance,
+          instances
+        },
         ids,
         processes: ids.map(id => {
           const {

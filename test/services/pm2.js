@@ -5,7 +5,7 @@ describe('pm2', () => {
   it('reports pm2 related attributes', done => {
     pm2(require('pm2'))
       .then(data => {
-        expect(data).to.have.keys('ids', 'processes');
+        expect(data).to.have.keys('currentApp', 'ids', 'processes');
 
         done();
       })
