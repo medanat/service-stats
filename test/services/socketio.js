@@ -8,7 +8,7 @@ describe('socketio', () => {
       clients: [],
       clientsCount: 0,
       transports: ['polling', 'websocket'],
-      wsEngine: 'uws'
+      wsEngine: 'ws'
     });
   });
 });
