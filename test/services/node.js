@@ -5,7 +5,7 @@ describe('node', () => {
   it('reports node related attributes', () => {
     expect(node()).to.eql({
       env: 'test',
-      version: 'v8.9.4'
+      version: 'v8.10.0'
     });
   });
 });
