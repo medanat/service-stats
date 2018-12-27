@@ -17,7 +17,7 @@ describe('service-stats', () => {
 
           expect(data.node).to.eql({
             env: 'test',
-            version: 'v8.10.0'
+            version: 'v10.13.0'
           });
 
           expect(redisStub.called).to.be.true;
@@ -35,7 +35,7 @@ describe('service-stats', () => {
           expect(data).to.eql({
             node: {
               env: 'test',
-              version: 'v8.10.0'
+              version: 'v10.13.0'
             }
           });
 
