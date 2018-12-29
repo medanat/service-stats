@@ -1,0 +1,21 @@
+version: "3.7"
+services:
+  service_stats_test:
+    image: node:10.13.0
+    links:
+      - redis_test
+    working_dir: /home/node/app
+    ports:
+      - "9001:9000"
+    volumes:
+      - ./:/home/node/app
+    environment:
+      NODE_ENV: test
+      REDIS_HOST: redis_test
+
+  redis_test:
+    image: redis:5.0.3
+    ports:
+      - "6379:6379"
+    environment:
+      ALLOW_EMPTY_PASSWORD: "yes"
