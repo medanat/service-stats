@@ -6,7 +6,11 @@ const { expect } = require('chai'),
 describe('service-stats', () => {
   describe('#report', () => {
     it('only reports the services selected', done => {
-      const redis = require('redis').createClient(),
+      const redis = require('redis').createClient({
+              port: 6379,
+              host: process.env.REDIS_HOST || '127.0.0.1',
+              db: 6
+            }),
             pm2Stub = sinon.stub(services, 'pm2'),
             redisStub = sinon.stub(services, 'redis');
 

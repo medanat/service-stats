@@ -3,7 +3,11 @@ const { expect } = require('chai'),
 
 describe('redis', () => {
   it('reports redis related attributes', done => {
-    redis(require('redis').createClient())
+    redis(require('redis').createClient({
+      port: 6379,
+      host: process.env.REDIS_HOST || '127.0.0.1',
+      db: 6
+    }))
       .then(data => {
         expect(data).to.have.keys('dbsize', 'clients', 'cluster',
           'commandstats', 'cpu', 'keyspace', 'memory', 'persistence',
